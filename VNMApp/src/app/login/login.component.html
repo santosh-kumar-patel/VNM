@@ -1,0 +1,35 @@
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+       <div class="col-lg-12 text-center" >
+          <div class="container box">
+             <div class="row">
+                <div class="col-12" style="text-align: center;">
+                   <form [formGroup]="formData" (ngSubmit)="onSubmit()" class="form-signin">
+                   <h2 >Please sign in</h2>
+                   <br>
+                   <label for="inputEmail" class="col-6">Username</label>
+                   <input type="text" id="username" class="col-6" formControlName="userName" placeholder="Username" required autofocus>
+                   <label for="inputPassword"  class="col-6">Password</label>
+                   <input type="password" id="inputPassword"  class="col-6" 
+                         formControlName="password" placeholder="Password" required>
+                         <br>
+                   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                   <br>
+                   <label class="lblMessage">{{message}}</label>
+                   </form>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <div>
+   <div class="row">
+      {{data.toString()}}
+   </div>
+ </div>
+<!-- <app-employee (messageEvent)="ReceiveMessage($event)" *ngIf="false"></app-employee> -->
+
+
+ 

@@ -1,0 +1,18 @@
+<p>Welcome {{userName | uppercase }}!</p>
+<button class="btn btn-lg btn-primary btn-block" type="submit" style="right: auto;" (click)="Logout()">Sign Out</button>
+
+<input type="number" [(ngModel)]="message" placeholder="Enter your Amount"  pattern="^[0-9]*$" />
+<p>You entered : <strong>{{ message |empPipe}}</strong></p>
+
+<ul>
+  <li *ngFor="let emp of employees;">
+    {{ emp.name }}
+    <button (click)="deleteEmployee(emp.id)">X</button>
+  </li>
+</ul>
+
+<input #empName type="text" placeholder="Enter name" />
+<button (click)="addEmployee(empName.value); empName.value=''">Add</button>
+
+
+
